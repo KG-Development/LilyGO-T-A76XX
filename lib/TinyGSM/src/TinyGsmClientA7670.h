@@ -604,10 +604,8 @@ class TinyGsmA7670 : public TinyGsmModem<TinyGsmA7670>,
       streamSkipUntil(',');               // BEIDOU satellite valid numbers
       ilat  = streamGetFloatBefore(',');  // Latitude in ddmm.mmmmmm
       north =  stream.readStringUntil(',')[0];              // N/S Indicator, N=north or S=south
-      streamSkipUntil(',');
       ilon = streamGetFloatBefore(',');  // Longitude in ddmm.mmmmmm
       east = stream.readStringUntil(',')[0];              // E/W Indicator, E=east or W=west
-      streamSkipUntil(',');
 
       // Date. Output format is ddmmyy
       iday   = streamGetIntLength(2);    // Two digit day
